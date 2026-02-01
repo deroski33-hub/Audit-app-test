@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 248, 250, 252;
+  --background-end-rgb: 241, 245, 249;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+}
+
+/* Big 4 Professional Styling */
+.audit-card {
+  @apply bg-white rounded-lg shadow-md border border-gray-200 p-6;
+}
+
+.audit-header {
+  @apply bg-audit-primary text-white py-4 px-6 rounded-t-lg;
+}
+
+.audit-table {
+  @apply w-full border-collapse;
+}
+
+.audit-table th {
+  @apply bg-audit-primary text-white text-left py-3 px-4 font-semibold text-sm uppercase tracking-wider;
+}
+
+.audit-table td {
+  @apply border-b border-gray-200 py-3 px-4 text-sm;
+}
+
+.audit-table tr:hover td {
+  @apply bg-gray-50;
+}
+
+.audit-btn {
+  @apply px-4 py-2 rounded-md font-medium transition-colors duration-200;
+}
+
+.audit-btn-primary {
+  @apply bg-audit-primary text-white hover:bg-audit-secondary;
+}
+
+.audit-btn-secondary {
+  @apply bg-gray-100 text-gray-700 hover:bg-gray-200 border border-gray-300;
+}
+
+.audit-btn-success {
+  @apply bg-audit-success text-white hover:bg-green-600;
+}
+
+/* Dropzone Styling */
+.dropzone {
+  @apply border-2 border-dashed border-gray-300 rounded-lg p-8 text-center cursor-pointer transition-colors duration-200;
+}
+
+.dropzone:hover,
+.dropzone-active {
+  @apply border-audit-accent bg-blue-50;
+}
+
+/* Lead Schedule Styling */
+.lead-schedule-header {
+  @apply text-center font-bold text-lg py-2 border-b-2 border-audit-primary;
+}
+
+.schedule-ref {
+  @apply text-xs text-gray-500 font-mono;
+}
