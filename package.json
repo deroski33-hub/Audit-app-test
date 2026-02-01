@@ -1,0 +1,20 @@
+{
+  "name": "audit-app",
+  "version": "1.0.0",
+  "description": "Audit application with AI extraction, review mode, and PwC-style Excel export",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "extract": "node src/index.js extract",
+    "review": "node src/index.js review",
+    "export": "node src/index.js export"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "readline-sync": "^1.4.10"
+  },
+  "keywords": ["audit", "excel", "pwc", "extraction"],
+  "author": "",
+  "license": "MIT"
+}
